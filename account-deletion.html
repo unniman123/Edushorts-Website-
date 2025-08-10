@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Delete your Edushorts account and all associated data permanently. Learn what data gets deleted and how to proceed.">
+  <meta name="keywords" content="Edushorts, account deletion, delete account, privacy, data removal">
+  <title>Delete Your Edushorts Account | Account Removal</title>
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Delete Your Edushorts Account">
+  <meta property="og:description" content="Permanently delete your Edushorts account and all associated data">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://edushorts-website.vercel.app/account-deletion">
+  
+  <!-- App Deep Linking Meta Tags -->
+  <meta name="apple-itunes-app" content="app-id=com.ajilkojilgokulravi.unniman">
+  <meta name="google-play-app" content="app-id=com.ajilkojilgokulravi.unniman">
+  
+  <!-- Deep Link Protocol -->
+  <meta name="custom-scheme" content="edushorts">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #000000;
+      background-color: #ffffff;
+      min-height: 100vh;
+    }
+    
+    .header {
+      background-color: #ffffff;
+      color: #000000;
+      padding: 1rem 0;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-bottom: 3px solid #ff0000;
+    }
+    
+    .header h1 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    
+    .header p {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    
+    .main-content {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .app-link-section {
+      background: #ffffff;
+      color: #000000;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 2rem;
+      border: 2px solid #ff0000;
+    }
+    
+    .app-link-section h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    
+    .deep-link-btn {
+      display: inline-block;
+      background: #ff0000;
+      color: white;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin: 1rem 0;
+      transition: all 0.3s ease;
+      border: 2px solid #ff0000;
+    }
+    
+    .deep-link-btn:hover {
+      background: white;
+      color: #ff0000;
+      transform: translateY(-2px);
+    }
+    
+    .alternative-section {
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      color: #000000;
+    }
+    
+    .alternative-section a {
+      color: #ff0000;
+      text-decoration: none;
+    }
+    
+    .alternative-section a:hover {
+      text-decoration: underline;
+    }
+    
+    .data-section {
+      background: #fff;
+      border: 1px solid #e9ecef;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+      color: #000000;
+    }
+    
+    .data-section a {
+      color: #ff0000;
+      text-decoration: none;
+    }
+    
+    .data-section a:hover {
+      text-decoration: underline;
+    }
+    
+    .contact-section {
+      background: #ffffff;
+      color: #000000;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      border: 2px solid #ff0000;
+    }
+    
+    .contact-section a {
+      color: #ff0000;
+      text-decoration: none;
+    }
+    
+    .contact-section a:hover {
+      text-decoration: underline;
+    }
+    
+    .steps-list {
+      list-style: none;
+      counter-reset: step-counter;
+    }
+    
+    .steps-list li {
+      counter-increment: step-counter;
+      margin: 1rem 0;
+      padding-left: 3rem;
+      position: relative;
+    }
+    
+    .steps-list li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #ff0000;
+      color: white;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+    
+    .data-list {
+      list-style: none;
+      margin: 1rem 0;
+    }
+    
+    .data-list li {
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      background: #f8f9fa;
+      border-radius: 6px;
+      border-left: 4px solid #ff0000;
+      padding-left: 1rem;
+      color: #000000;
+    }
+    
+    .warning-box {
+      background: #fff3cd;
+      border: 1px solid #ffecb5;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-left: 4px solid #ff9900;
+      color: #000000;
+    }
+    
+    .footer {
+      background: #333333;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 3rem;
+    }
+    
+    .footer a {
+      color: #ff3333;
+      text-decoration: none;
+    }
+    
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    
+    .app-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    
+    .app-info-item {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-radius: 8px;
+      border-left: 4px solid #ff0000;
+      color: #000000;
+    }
+    
+    .app-info-item strong {
+      display: block;
+      color: #ff0000;
+      margin-bottom: 0.5rem;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem 0.5rem;
+      }
+      
+      .main-content, .app-link-section, .alternative-section, .data-section, .contact-section {
+        padding: 1.5rem;
+      }
+      
+      .header h1 {
+        font-size: 1.5rem;
+      }
+      
+      .app-info {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .redirect-status {
+      text-align: center;
+      margin: 1rem 0;
+      padding: 1rem;
+      background: #ffffff;
+      border-radius: 8px;
+      border: 1px solid #ff0000;
+      color: #000000;
+    }
+    
+    .fallback {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+  </style>
+  
+  <script type="text/javascript">
+
+    function openApp() {
+      const redirectStatus = document.getElementById('redirect-status');
+      const fallbackDiv = document.getElementById('fallback');
+      
+      if (redirectStatus) {
+        redirectStatus.innerHTML = '<p>🚀 Attempting to open Edushorts app...</p>';
+      }
+
+      // Try to open the app via deep link
+      window.location.href = 'edushorts://settings/delete-account';
+      
+      // Show fallback instructions after 2 seconds if app didn't open
+      setTimeout(function() {
+        if (redirectStatus) {
+          redirectStatus.innerHTML = '<p>⚠️ App did not open automatically</p>';
+        }
+        if (fallbackDiv) {
+          fallbackDiv.style.display = 'block';
+        }
+      }, 2000);
+    }
+    
+    // Run auto-redirect when page loads
+    window.addEventListener('load', function() {
+      // Only auto-redirect on mobile devices
+      if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        openApp();
+      } else {
+        // On desktop, show fallback immediately
+        const fallbackDiv = document.getElementById('fallback');
+        if (fallbackDiv) {
+          fallbackDiv.style.display = 'block';
+        }
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <header class="header">
+    <h1>Delete Your Edushorts Account</h1>
+    <p>Permanently remove your account and all associated data</p>
+  </header>
+
+  <div class="container">
+    <div class="app-link-section">
+      <h2>📱 Delete via Mobile App (Recommended)</h2>
+      <div id="redirect-status" class="redirect-status">
+        <p>Click the button below to open Edushorts and delete your account:</p>
+      </div>
+      <a href="edushorts://settings/delete-account" class="deep-link-btn" onclick="openApp(); return false;">
+        🗑️ Open Edushorts to Delete Account
+      </a>
+      
+      <div id="fallback" class="fallback">
+        <h3>App Not Opening?</h3>
+        <p><strong>Manual Steps:</strong></p>
+        <ol class="steps-list">
+          <li>Open the Edushorts app on your phone</li>
+          <li>Go to your Profile tab</li>
+          <li>Tap "Settings"</li>
+          <li>Scroll down and tap "Delete Account"</li>
+          <li>Confirm the deletion</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <h2>🏢 About Edushorts</h2>
+      <div class="app-info">
+        <div class="app-info-item">
+          <strong>App Name</strong>
+          Edushorts
+        </div>
+        <div class="app-info-item">
+          <strong>Version</strong>
+          1.0.0
+        </div>
+        <div class="app-info-item">
+          <strong>Package</strong>
+          com.ajilkojilgokulravi.unniman
+        </div>
+        <div class="app-info-item">
+          <strong>Developer</strong>
+          unniman
+        </div>
+      </div>
+    </div>
+
+    <div class="data-section">
+      <h2>🗂️ What Data Gets Deleted?</h2>
+      <p>When you delete your Edushorts account, the following information will be <strong>permanently removed</strong>:</p>
+      
+      <ul class="data-list">
+        <li><strong>Profile Information:</strong> Username, email, full name, profile picture</li>
+        <li><strong>Saved Content:</strong> All saved articles, bookmarks, and reading history</li>
+        <li><strong>Notifications:</strong> Notification preferences, push notification data, and history</li>
+        <li><strong>Account Settings:</strong> App preferences, customizations, and configurations</li>
+        <li><strong>User Permissions:</strong> Role assignments and access permissions</li>
+        <li><strong>Session Data:</strong> Login sessions, authentication tokens, and device data</li>
+      </ul>
+      
+      <div class="warning-box">
+        <strong>⚠️ Important:</strong> This action cannot be undone. Once deleted, your account and all associated data will be permanently removed from our servers.
+      </div>
+    </div>
+
+    <div class="alternative-section">
+      <h2>🌐 Alternative Deletion Methods</h2>
+      
+      <h3>Method 1: Contact Support</h3>
+      <p>If you cannot access the mobile app, our support team can help you delete your account:</p>
+      <ul>
+        <li>Send an email with your account deletion request</li>
+        <li>Include your registered email address</li>
+        <li>We'll process your request within 48 hours</li>
+      </ul>
+      
+      <h3>Method 2: Visit Our Website</h3>
+      <p>You can also visit our main website for additional support options:</p>
+      <ul>
+        <li><a href="https://edushorts-website.vercel.app/" target="_blank">Main Website</a></li>
+        <li><a href="https://edushorts-website.vercel.app/#contact" target="_blank">Contact Form</a></li>
+        <li><a href="https://edushorts-website.vercel.app/#about" target="_blank">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="contact-section">
+      <h2>📧 Need Help?</h2>
+      <p>If you're having trouble deleting your account or have questions about the process:</p>
+      
+      <p><strong>Email:</strong> <a href="mailto:support@edushorts.com">support@edushorts.com</a></p>
+      <p><strong>Response Time:</strong> Within 48 hours</p>
+      <p><strong>Required Info:</strong> Please include your registered email address when contacting support</p>
+      
+      <h3>📋 What to Include in Your Email:</h3>
+      <ul>
+        <li>Your registered email address</li>
+        <li>Reason for account deletion (optional)</li>
+        <li>Any specific issues you're experiencing</li>
+        <li>Device type (Android/iPhone) if relevant</li>
+      </ul>
+    </div>
+
+    <div class="data-section">
+      <h2>🔒 Privacy & Data Protection</h2>
+      <p>We take your privacy seriously. Learn more about how we handle your data:</p>
+      <ul>
+        <li><a href="https://edushorts-website.vercel.app/privacy-policy.html" target="_blank">Privacy Policy</a></li>
+        <li><a href="https://edushorts-website.vercel.app/terms-conditions.html" target="_blank">Terms & Conditions</a></li>
+      </ul>
+      
+      <p><strong>Data Retention:</strong> After account deletion, we may retain certain data for legal compliance purposes as outlined in our Privacy Policy, but all personal identifiers will be removed.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2024 Edushorts. All rights reserved.</p>
+    <p>
+      <a href="https://edushorts-website.vercel.app/" target="_blank">Website</a> | 
+      <a href="https://edushorts-website.vercel.app/privacy-policy.html" target="_blank">Privacy</a> | 
+      <a href="https://edushorts-website.vercel.app/terms-conditions.html" target="_blank">Terms</a> | 
+      <a href="https://edushorts-website.vercel.app/#contact" target="_blank">Contact</a>
+    </p>
+    <p><small>App Package: com.ajilkojilgokulravi.unniman | Version 1.0.0</small></p>
+  </footer>
+</body>
+</html>
